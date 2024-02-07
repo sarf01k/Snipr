@@ -1,0 +1,55 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const changePasswordButton = document.getElementById("change-password-btn");
+
+    changePasswordButton.addEventListener("click", changePassword);
+
+    async function changePassword(e) {
+        e.preventDefault();
+
+        changePasswordButton.innerText = "Saving changes...";
+
+        const formData = new FormData(document.querySelector("form"));
+        const urlEncodedData = new URLSearchParams(formData).toString();
+
+        const request = new Request("/settings/password", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: urlEncodedData,
+        });
+
+        try {
+            const response = await fetch(request);
+            const contentType = response.headers.get("Content-Type");
+
+            if (response.ok) {
+                if (contentType && contentType.includes("application/json")) {
+
+                    const data = await response.json();
+                    console.log(data);
+
+                } else {
+                    console.log("Non-JSON response");
+                    window.location.href = "/settings";
+                }
+            } else {
+                const data = await response.json();
+                console.log(data);
+                const errorMessage = document.querySelector(".error-message");
+
+                errorMessage.innerText = `* ${data.message}`;
+                errorMessage.style.color = "red";
+
+                setTimeout(() => {
+                    errorMessage.style.color = "transparent";
+                }, 3000);
+            }
+
+        } catch (error) {
+            console.error(`Error:\n${error}`);
+        } finally {
+            changePasswordButton.innerText = "Change password";
+        }
+    }
+});

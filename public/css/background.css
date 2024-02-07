@@ -1,0 +1,73 @@
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(to right bottom, #102a6c, #2c1e52, #2f153a, #290f26, #1e0a16, #1d0a15, #1b0b13, #1a0b12, #25111d, #2f1529, #381937, #3f1f47);
+    background-repeat: no-repeat;
+}
+
+input {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.btn {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.btn-success {
+    background-color: #4CAF50;
+}
+
+.btn-success:hover {
+    background-color: #238636;
+}
+
+#cancel-btn {
+    background-color: #E53935;
+    color: white;
+    transition: all .1s ease;
+    border: none;
+}
+
+#cancel-btn:hover {
+    background-color: #B71C1C;
+    transition: all .3s ease;
+}
+
+#logo {
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+}
+
+#form-title {
+    color: #E0E0E0;
+}
+
+.table-head {
+    color: white;
+}
+
+#url {
+    color: #E0E0E0;
+    transition:  all .1s ease;
+}
+
+#url:hover {
+    text-decoration: none;
+    color: white;
+    transition:  all .2s ease;
+}
+
+#forgot-password a {
+    color: #E0E0E0;
+    transition: all .1s ease;
+}
+
+#forgot-password a:hover {
+    color: white;
+    text-decoration: none;
+    transition: all .7s ease-out;
+}

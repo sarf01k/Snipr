@@ -1,0 +1,32 @@
+{
+  "name": "snipr",
+  "version": "1.0.0",
+  "description": "A lightweight and efficient Node.js package for creating and managing shortened URLs.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "url",
+    "shortener",
+    "node",
+    "npm",
+    "package"
+  ],
+  "author": "Isaac K. Sarfo",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.1.1",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.9.9",
+    "shortid": "^2.2.15"
+  }
+}

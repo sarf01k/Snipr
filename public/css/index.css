@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: auto;
+}
+
+#log-in-btn {
+    color: white;
+    border: 1px solid #238636;
+    background-color: #238636;
+    transition: all .1s ease;
+}
+
+#log-in-btn:hover {
+    background-color: #2FAA48;
+    border: 1px solid #2FAA48;
+}
+
+#message {
+    color: #E0E0E0;
+}
+
+#log-in-text {
+    color: white;
+}
+
+#log-in-text:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: auto;
+}
+
+#logout-btn {
+    background-color: #B71C1C;
+    color: white;
+    transition: all .1s ease;
+    border: none;
+}
+
+#logout-btn:hover {
+    background-color: #E53935;
+    transition: all .3s ease;
+}
+
+#settings-icon {
+    color: white;
+    font-size: 20px;
+}
+
+#settings-icon:hover {
+    color: #E0E0E0
+}
